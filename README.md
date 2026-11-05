@@ -4,9 +4,15 @@ Aplicación móvil Android, desarrollada con **Kotlin** y **Jetpack Compose**, p
 
 > Proyecto de la práctica de laboratorio de **Desarrollo de Aplicaciones Móviles** — Universidad de Montemorelos.
 
-📄 El documento de presentación completo está en [`BibleSearchUM_Presentacion.pdf`](BibleSearchUM_Presentacion.pdf).
-
 ---
+
+## Vista previa
+
+Así debe verse la aplicación al terminar el desarrollo:
+
+<p align="center">
+  <img src="images/AppBiblia_React.png" alt="Vista previa de BibleSearchUM: Éxodo 20:8 seleccionado y mostrado en una tarjeta con botón Compartir" width="300">
+</p>
 
 ## Características
 
@@ -36,23 +42,23 @@ Aplicación móvil Android, desarrollada con **Kotlin** y **Jetpack Compose**, p
 ```
 .
 ├── README.md                         ← este archivo
-├── BibleSearchUM_Presentacion.pdf    ← documento de presentación
-└── BibleSearchUM/                    ← proyecto de Android Studio (abrir esta carpeta)
-    ├── build.gradle.kts
-    ├── settings.gradle.kts
-    ├── gradlew / gradlew.bat
-    └── app/src/main/
-        ├── AndroidManifest.xml       (permiso INTERNET)
-        └── java/com/example/blesearchum/
-            ├── MainActivity.kt
-            ├── model/BibleModels.kt          (BibleBook, BibleVerse)
-            ├── network/BibleApiService.kt    (interfaz Retrofit + RetrofitInstance)
-            └── ui/
-                ├── BibleUiState.kt
-                ├── BibleViewModel.kt
-                ├── BibleSearchScreen.kt
-                ├── components/DropdownSelector.kt
-                └── theme/Theme.kt
+├── images/
+│   └── AppBiblia_React.png           ← vista previa de la app
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradlew / gradlew.bat
+└── app/src/main/
+    ├── AndroidManifest.xml           (permiso INTERNET)
+    └── java/com/example/blesearchum/
+        ├── MainActivity.kt
+        ├── model/BibleModels.kt          (BibleBook, BibleVerse)
+        ├── network/BibleApiService.kt    (interfaz Retrofit + RetrofitInstance)
+        └── ui/
+            ├── BibleUiState.kt
+            ├── BibleViewModel.kt
+            ├── BibleSearchScreen.kt
+            ├── components/DropdownSelector.kt
+            └── theme/Theme.kt
 ```
 
 ## Cómo funciona
@@ -85,16 +91,16 @@ Aplicación móvil Android, desarrollada con **Kotlin** y **Jetpack Compose**, p
 
 1. Clona el repositorio:
    ```bash
-   git clone <url-del-repositorio>
+   git clone https://github.com/Leoric30/BibliaApp.git
    ```
-2. En Android Studio elige **File → Open** y selecciona la carpeta **`BibleSearchUM/`** (la que tiene `settings.gradle.kts`).
+2. En Android Studio elige **File → Open** y selecciona la carpeta clonada (la que tiene `settings.gradle.kts`).
 3. Espera a que termine el *Gradle Sync*. Android Studio crea `local.properties` con la ruta de tu SDK.
 4. Ejecuta la configuración **app** (▶) en un emulador o dispositivo.
 
 Desde la terminal:
 
 ```bash
-cd BibleSearchUM
+cd BibliaApp
 ./gradlew assembleDebug      # genera app/build/outputs/apk/debug/app-debug.apk
 ./gradlew installDebug       # la instala en el dispositivo conectado
 ```
